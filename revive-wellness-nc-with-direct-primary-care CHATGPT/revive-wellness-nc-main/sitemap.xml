@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://revivewellnessnc.com/</loc></url>
+  <url><loc>https://revivewellnessnc.com/weight-loss</loc></url>
+  <url><loc>https://revivewellnessnc.com/iv-therapy</loc></url>
+  <url><loc>https://revivewellnessnc.com/about</loc></url>
+  <url><loc>https://revivewellnessnc.com/contact</loc></url>
+  <url><loc>https://revivewellnessnc.com/privacy</loc></url>
+  <url>
+    <loc>https://revivewellnessnc.com/direct-primary-care</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+</urlset>
