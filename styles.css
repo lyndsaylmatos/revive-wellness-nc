@@ -1594,3 +1594,16 @@ ul {
     html { scroll-behavior: auto; }
     .reveal, .reveal.is-visible { opacity: 1; transform: none; transition: none; }
 }
+
+/* Keep DPC consultation card at its natural height */
+.pricing-card {
+    align-self: start;
+    height: fit-content;
+}
+
+
+
+
+
+
+
