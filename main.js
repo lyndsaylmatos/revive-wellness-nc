@@ -1,112 +1,87 @@
-// Mobile Navigation Toggle
-document.addEventListener('DOMContentLoaded', function() {
+// Revive Wellness NC — lightweight site interactions
+document.addEventListener('DOMContentLoaded', () => {
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
+    const navbar = document.querySelector('.navbar');
 
     if (navToggle && navMenu) {
-        navToggle.addEventListener('click', function() {
-            navToggle.classList.toggle('active');
-            navMenu.classList.toggle('active');
+        navToggle.addEventListener('click', () => {
+            const isOpen = navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active', isOpen);
+            navToggle.setAttribute('aria-expanded', String(isOpen));
         });
 
-        // Close menu when clicking a link
         navMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navToggle.classList.remove('active');
                 navMenu.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
             });
         });
 
-        // Close menu when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+        document.addEventListener('click', event => {
+            if (!navToggle.contains(event.target) && !navMenu.contains(event.target)) {
                 navToggle.classList.remove('active');
                 navMenu.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
             }
         });
     }
 
-    // Navbar scroll effect
-    const navbar = document.querySelector('.navbar');
-    let lastScroll = 0;
+    if (navbar) {
+        const updateNavShadow = () => {
+            navbar.classList.toggle('is-scrolled', window.scrollY > 100);
+        };
+        updateNavShadow();
+        window.addEventListener('scroll', updateNavShadow, { passive: true });
+    }
 
-    window.addEventListener('scroll', function() {
-        const currentScroll = window.pageYOffset;
+    // FAQ accordion
+    document.querySelectorAll('.faq-item').forEach(item => {
+        const question = item.querySelector('.faq-question');
+        if (!question) return;
+        question.setAttribute('aria-expanded', item.classList.contains('active') ? 'true' : 'false');
 
-        if (currentScroll > 100) {
-            navbar.style.boxShadow = '0 4px 20px rgba(11, 93, 111, 0.15)';
-        } else {
-            navbar.style.boxShadow = '0 2px 8px rgba(11, 93, 111, 0.08)';
-        }
-
-        lastScroll = currentScroll;
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            document.querySelectorAll('.faq-item').forEach(other => {
+                other.classList.remove('active');
+                const q = other.querySelector('.faq-question');
+                if (q) q.setAttribute('aria-expanded', 'false');
+            });
+            if (!isActive) {
+                item.classList.add('active');
+                question.setAttribute('aria-expanded', 'true');
+            }
+        });
     });
 
-    // FAQ Accordion
-    const faqItems = document.querySelectorAll('.faq-item');
+    // Smooth scrolling without breaking empty/invalid hash links.
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', event => {
+            const hash = anchor.getAttribute('href');
+            if (!hash || hash === '#') return;
+            const target = document.querySelector(hash);
+            if (!target) return;
+            event.preventDefault();
+            const headerOffset = 100;
+            const top = target.getBoundingClientRect().top + window.scrollY - headerOffset;
+            window.scrollTo({ top, behavior: 'smooth' });
+        });
+    });
 
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-
-        if (question) {
-            question.addEventListener('click', () => {
-                const isActive = item.classList.contains('active');
-
-                // Close all other items
-                faqItems.forEach(otherItem => {
-                    otherItem.classList.remove('active');
-                });
-
-                // Toggle current item
-                if (!isActive) {
-                    item.classList.add('active');
+    // Reveal animations only when supported; content remains visible if JS is unavailable.
+    const animated = document.querySelectorAll('.service-card, .step, .testimonial-card, .feature');
+    if ('IntersectionObserver' in window && animated.length) {
+        animated.forEach(el => el.classList.add('reveal'));
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
                 }
             });
-        }
-    });
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                const headerOffset = 100;
-                const elementPosition = target.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
-    // Animate elements on scroll
-    const animateOnScroll = () => {
-        const elements = document.querySelectorAll('.service-card, .step, .testimonial-card, .feature');
-
-        elements.forEach(el => {
-            const rect = el.getBoundingClientRect();
-            const isVisible = rect.top < window.innerHeight - 100;
-
-            if (isVisible) {
-                el.style.opacity = '1';
-                el.style.transform = 'translateY(0)';
-            }
-        });
-    };
-
-    // Set initial state for animated elements
-    const animatedElements = document.querySelectorAll('.service-card, .step, .testimonial-card, .feature');
-    animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    });
-
-    // Run on load and scroll
-    animateOnScroll();
-    window.addEventListener('scroll', animateOnScroll);
+        }, { rootMargin: '0px 0px -80px 0px', threshold: 0.05 });
+        animated.forEach(el => observer.observe(el));
+    }
 });
