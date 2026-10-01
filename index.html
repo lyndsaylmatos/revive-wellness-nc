@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 
-<html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+```
 <meta name="author" content="Revive Wellness NC">
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="robots" content="index, follow">
 
 <title>Revive Wellness NC | Direct Primary Care, Weight Loss & IV Therapy</title>
 
 <meta name="description" content="Revive Wellness NC provides Direct Primary Care, medical weight loss, IV hydration therapy and wellness services in Knightdale, NC. Serving Wendell, Zebulon, Raleigh, Clayton, Wake Forest, Garner and surrounding communities.">
 
 <link rel="canonical" href="https://revivewellnessnc.com/">
-<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
-<link rel="icon" type="image/png" href="/logo.png">
+<link rel="icon" type="image/png" href="logo.png">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -20,15 +23,6 @@
 <meta property="og:description" content="Direct Primary Care, medical weight loss, IV hydration and wellness services in Knightdale, NC.">
 <meta property="og:url" content="https://revivewellnessnc.com/">
 <meta property="og:image" content="https://revivewellnessnc.com/images/iv-treatment.jpg">
-<meta property="og:image:alt" content="Revive Wellness NC treatment room">
-<meta property="og:locale" content="en_US">
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Revive Wellness NC | Personalized Healthcare & Wellness">
-<meta name="twitter:description" content="Direct Primary Care, medical weight loss, IV hydration and wellness services in Knightdale, NC.">
-<meta name="twitter:image" content="https://revivewellnessnc.com/images/iv-treatment.jpg">
-<meta name="twitter:image:alt" content="Revive Wellness NC treatment room">
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,6 +30,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
     :root {
         --cream: #f8f6f2;
         --cream-dark: #eeeae2;
@@ -46,7 +41,7 @@
         --accent: #b99a68;
         --accent-dark: #967a4d;
         --border: #e7e2d9;
-        --shadow: 0 15px 45px rgba(37, 37, 37, 0.08);
+        --shadow: 0 15px 45px rgba(37,37,37,.08);
         --radius: 18px;
         --serif: "Playfair Display", Georgia, serif;
         --sans: "Montserrat", Arial, sans-serif;
@@ -65,9 +60,8 @@
     body {
         font-family: var(--sans);
         color: var(--charcoal);
-        background: var(--white);
+        background: white;
         line-height: 1.7;
-        font-size: 15px;
     }
 
     img {
@@ -85,27 +79,24 @@
         margin: 0 auto;
     }
 
-    /* =========================
-       NAVIGATION
-    ========================= */
+    /* NAVIGATION */
 
     .navbar {
         position: sticky;
         top: 0;
         z-index: 1000;
-        background: rgba(255,255,255,.96);
+        background: rgba(255,255,255,.97);
         border-bottom: 1px solid var(--border);
-        backdrop-filter: blur(12px);
+        backdrop-filter: blur(10px);
     }
 
     .nav-container {
         width: min(1280px, calc(100% - 40px));
-        margin: auto;
         min-height: 82px;
+        margin: auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 30px;
     }
 
     .logo-img {
@@ -116,16 +107,14 @@
     .nav-menu {
         display: flex;
         align-items: center;
-        gap: 28px;
+        gap: 25px;
         list-style: none;
     }
 
     .nav-menu a {
         font-size: 12px;
         font-weight: 600;
-        letter-spacing: .04em;
         color: #444;
-        transition: .25s ease;
     }
 
     .nav-menu a:hover,
@@ -133,22 +122,21 @@
         color: var(--accent-dark);
     }
 
-    .nav-menu .btn-nav {
+    .btn-nav {
         background: var(--charcoal);
-        color: white;
+        color: white !important;
         padding: 12px 21px;
         border-radius: 30px;
     }
 
-    .nav-menu .btn-nav:hover {
+    .btn-nav:hover {
         background: var(--accent-dark);
-        color: white;
     }
 
     .nav-toggle {
         display: none;
-        border: 0;
         background: none;
+        border: none;
         cursor: pointer;
     }
 
@@ -160,9 +148,7 @@
         margin: 5px 0;
     }
 
-    /* =========================
-       BUTTONS
-    ========================= */
+    /* BUTTONS */
 
     .btn {
         display: inline-flex;
@@ -175,8 +161,7 @@
         font-weight: 700;
         letter-spacing: .05em;
         text-transform: uppercase;
-        transition: all .25s ease;
-        cursor: pointer;
+        transition: .25s ease;
     }
 
     .btn-primary {
@@ -190,8 +175,7 @@
     }
 
     .btn-secondary {
-        border: 1px solid rgba(37,37,37,.25);
-        color: var(--charcoal);
+        border: 1px solid #ccc;
         background: white;
     }
 
@@ -220,17 +204,10 @@
         color: white;
     }
 
-    .btn-outline-white:hover {
-        background: white;
-        color: var(--charcoal);
-    }
-
-    /* =========================
-       HERO
-    ========================= */
+    /* HERO */
 
     .hero {
-        background: linear-gradient(135deg, #f8f6f2 0%, #ffffff 70%);
+        background: linear-gradient(135deg,#f8f6f2,#ffffff);
         padding: 80px 0 90px;
     }
 
@@ -254,7 +231,7 @@
 
     .hero h1 {
         font-family: var(--serif);
-        font-size: clamp(46px, 5vw, 72px);
+        font-size: clamp(45px,5vw,72px);
         font-weight: 500;
         line-height: 1.08;
         margin-bottom: 25px;
@@ -293,7 +270,6 @@
         right: -25px;
         bottom: -25px;
         border-radius: 24px;
-        z-index: 0;
     }
 
     .hero-image-wrapper {
@@ -323,7 +299,6 @@
     .stat-number {
         font-family: var(--serif);
         font-size: 27px;
-        color: var(--charcoal);
     }
 
     .stat-label {
@@ -333,9 +308,7 @@
         letter-spacing: .07em;
     }
 
-    /* =========================
-       SECTIONS
-    ========================= */
+    /* GENERAL SECTIONS */
 
     section {
         padding: 100px 0;
@@ -349,7 +322,7 @@
 
     .section-header h2 {
         font-family: var(--serif);
-        font-size: clamp(35px, 4vw, 50px);
+        font-size: clamp(35px,4vw,50px);
         font-weight: 500;
         line-height: 1.2;
         margin-bottom: 15px;
@@ -357,29 +330,22 @@
 
     .section-header p {
         color: var(--muted);
-        font-size: 15px;
     }
 
-    /* =========================
-       SERVICES
-    ========================= */
-
-    .services-overview {
-        background: white;
-    }
+    /* SERVICES */
 
     .services-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3,1fr);
         gap: 24px;
     }
 
     .service-card {
         position: relative;
         padding: 40px 32px;
-        background: white;
         border: 1px solid var(--border);
         border-radius: var(--radius);
+        background: white;
         transition: .3s ease;
     }
 
@@ -389,7 +355,7 @@
     }
 
     .service-card.featured {
-        border: 1px solid rgba(185,154,104,.5);
+        border-color: rgba(185,154,104,.5);
         box-shadow: 0 10px 35px rgba(185,154,104,.12);
     }
 
@@ -399,8 +365,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 50%;
         background: var(--cream);
+        border-radius: 50%;
         color: var(--accent-dark);
         margin-bottom: 25px;
     }
@@ -420,7 +386,6 @@
         border-radius: 20px;
         font-size: 9px;
         font-weight: 700;
-        letter-spacing: .08em;
         text-transform: uppercase;
     }
 
@@ -462,9 +427,7 @@
         width: 100%;
     }
 
-    /* =========================
-       DPC FEATURE
-    ========================= */
+    /* DPC */
 
     .dpc-section {
         background: var(--cream);
@@ -491,7 +454,7 @@
 
     .dpc-content h2 {
         font-family: var(--serif);
-        font-size: clamp(36px, 4vw, 52px);
+        font-size: clamp(36px,4vw,52px);
         font-weight: 500;
         line-height: 1.2;
         margin-bottom: 20px;
@@ -500,7 +463,6 @@
     .dpc-content > p {
         color: var(--text);
         margin-bottom: 28px;
-        max-width: 600px;
     }
 
     .dpc-list {
@@ -514,17 +476,7 @@
         font-size: 14px;
     }
 
-    .dpc-list strong {
-        color: var(--charcoal);
-    }
-
-    /* =========================
-       WHY US
-    ========================= */
-
-    .why-us {
-        background: white;
-    }
+    /* WHY US */
 
     .why-us-grid {
         display: grid;
@@ -583,12 +535,9 @@
     .feature p {
         color: var(--muted);
         font-size: 12px;
-        line-height: 1.7;
     }
 
-    /* =========================
-       STEPS
-    ========================= */
+    /* STEPS */
 
     .how-it-works {
         background: var(--cream);
@@ -596,7 +545,7 @@
 
     .steps-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3,1fr);
         gap: 25px;
     }
 
@@ -609,7 +558,6 @@
         font-family: var(--serif);
         font-size: 55px;
         color: var(--accent);
-        line-height: 1;
         margin-bottom: 20px;
     }
 
@@ -630,17 +578,11 @@
         margin-top: 30px;
     }
 
-    /* =========================
-       TESTIMONIALS
-    ========================= */
-
-    .testimonials {
-        background: white;
-    }
+    /* TESTIMONIALS */
 
     .testimonials-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3,1fr);
         gap: 22px;
     }
 
@@ -678,7 +620,6 @@
         color: var(--muted);
         font-size: 10px;
         text-transform: uppercase;
-        letter-spacing: .06em;
     }
 
     .testimonials-badges {
@@ -689,30 +630,19 @@
     }
 
     .review-badge {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-size: 12px;
-        font-weight: 600;
         padding: 10px 16px;
         border: 1px solid var(--border);
         border-radius: 30px;
+        font-size: 12px;
     }
 
-    .review-badge img {
-        width: 20px;
-        height: 20px;
-    }
-
-    /* =========================
-       CTA
-    ========================= */
+    /* CTA */
 
     .cta-section {
         background: var(--charcoal);
         color: white;
-        padding: 90px 0;
         text-align: center;
+        padding: 90px 0;
     }
 
     .cta-content {
@@ -722,7 +652,7 @@
 
     .cta-content h2 {
         font-family: var(--serif);
-        font-size: clamp(38px, 5vw, 55px);
+        font-size: clamp(38px,5vw,55px);
         font-weight: 500;
         line-height: 1.2;
         margin-bottom: 18px;
@@ -740,9 +670,7 @@
         flex-wrap: wrap;
     }
 
-    /* =========================
-       FOOTER
-    ========================= */
+    /* FOOTER */
 
     .footer {
         background: #1c1c1c;
@@ -763,11 +691,10 @@
         margin-bottom: 20px;
     }
 
-    .footer-brand > p {
+    .footer-brand p,
+    .footer-contact p {
         color: #aaa;
         font-size: 12px;
-        line-height: 1.8;
-        max-width: 310px;
     }
 
     .footer h4 {
@@ -786,13 +713,13 @@
     }
 
     .footer li a,
-    .footer-contact p,
     .footer-contact a {
         color: #aaa;
         font-size: 12px;
     }
 
-    .footer a:hover {
+    .footer li a:hover,
+    .footer-contact a:hover {
         color: var(--accent);
     }
 
@@ -831,11 +758,13 @@
         font-size: 10px;
     }
 
-    /* =========================
-       MOBILE
-    ========================= */
+    /* MOBILE */
 
     @media (max-width: 950px) {
+
+        .nav-toggle {
+            display: block;
+        }
 
         .nav-menu {
             position: absolute;
@@ -847,7 +776,7 @@
             padding: 20px;
             flex-direction: column;
             align-items: stretch;
-            gap: 0;
+            gap: 10px;
             display: none;
         }
 
@@ -856,17 +785,12 @@
         }
 
         .nav-menu li {
-            padding: 10px 0;
+            padding: 7px 0;
         }
 
         .nav-menu .btn-nav {
             display: block;
             text-align: center;
-            margin-top: 8px;
-        }
-
-        .nav-toggle {
-            display: block;
         }
 
         .hero-grid,
@@ -910,7 +834,7 @@
 
         .container,
         .nav-container {
-            width: min(100% - 28px, 1180px);
+            width: calc(100% - 28px);
         }
 
         section {
@@ -930,18 +854,12 @@
             height: 390px;
         }
 
-        .hero-image::before {
-            right: -10px;
-            bottom: -10px;
-        }
-
         .why-features {
             grid-template-columns: 1fr;
         }
 
         .footer-grid {
             grid-template-columns: 1fr;
-            gap: 35px;
         }
 
         .footer-bottom {
@@ -953,61 +871,29 @@
             align-items: center;
         }
     }
-</style>
 
-<!-- Structured Data -->
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "MedicalClinic",
-    "name": "Revive Wellness NC",
-    "url": "https://revivewellnessnc.com/",
-    "logo": "https://revivewellnessnc.com/logo.png",
-    "image": "https://revivewellnessnc.com/images/clinic-room.jpg",
-    "description": "Direct Primary Care, medical weight loss, IV hydration and wellness services in Knightdale, NC.",
-    "telephone": "+1-984-304-4153",
-    "email": "ReviveWellnessNC@outlook.com",
-    "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "6905 Knightdale Boulevard, Suite 105",
-        "addressLocality": "Knightdale",
-        "addressRegion": "NC",
-        "postalCode": "27545",
-        "addressCountry": "US"
-    },
-    "priceRange": "$$",
-    "currenciesAccepted": "USD",
-    "areaServed": [
-        "Knightdale, NC",
-        "Wendell, NC",
-        "Zebulon, NC",
-        "Clayton, NC",
-        "Raleigh, NC",
-        "Rolesville, NC",
-        "Wake Forest, NC",
-        "Garner, NC"
-    ],
-    "sameAs": [
-        "https://www.facebook.com/revivewellnessnc",
-        "https://www.instagram.com/revivewellnessnc"
-    ]
-}
-</script>
+</style>
+```
 
 </head>
 
 <body>
 
-<!-- ========================= NAVIGATION ========================= -->
+<!-- NAVIGATION -->
 
-<nav class="navbar"> <div class="nav-container">
+<nav class="navbar">
+
+```
+<div class="nav-container">
 
     <a href="index.html" class="logo" aria-label="Revive Wellness NC Home">
+
         <img src="logo.png"
              alt="Revive Wellness NC"
              class="logo-img"
              width="1920"
              height="1146">
+
     </a>
 
     <button class="nav-toggle"
@@ -1015,18 +901,39 @@
             aria-label="Toggle navigation"
             aria-expanded="false"
             aria-controls="primary-navigation">
+
         <span></span>
         <span></span>
         <span></span>
+
     </button>
 
     <ul class="nav-menu" id="primary-navigation">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="direct-primary-care.html">Direct Primary Care</a></li>
-        <li><a href="weight-loss.html">Weight Loss</a></li>
-        <li><a href="iv-therapy.html">IV Therapy</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+
+        <li>
+            <a href="index.html" class="active">Home</a>
+        </li>
+
+        <li>
+            <a href="direct-primary-care.html">Direct Primary Care</a>
+        </li>
+
+        <li>
+            <a href="weight-loss.html">Weight Loss</a>
+        </li>
+
+        <li>
+            <a href="iv-therapy.html">IV Therapy</a>
+        </li>
+
+        <li>
+            <a href="about.html">About</a>
+        </li>
+
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
+
         <li>
             <a href="https://revivewellnessnc.hint.com/booking"
                class="btn-nav"
@@ -1035,17 +942,22 @@
                 Book Now
             </a>
         </li>
+
     </ul>
 
 </div>
+```
 
 </nav>
 
-<!-- ========================= HERO ========================= -->
+<!-- HERO -->
 
-<section class="hero"> <div class="container hero-grid">
+<section class="hero">
 
-    <div class="hero-content">
+```
+<div class="container hero-grid">
+
+    <div>
 
         <span class="hero-badge">
             Personalized Healthcare in Knightdale, NC
@@ -1064,6 +976,7 @@
         </p>
 
         <div class="hero-cta">
+
             <a href="https://revivewellnessnc.hint.com/booking"
                class="btn btn-primary"
                target="_blank"
@@ -1074,6 +987,7 @@
             <a href="#services" class="btn btn-secondary">
                 Explore Services
             </a>
+
         </div>
 
         <div class="hero-stats">
@@ -1094,30 +1008,41 @@
             </div>
 
         </div>
+
     </div>
 
+
     <div class="hero-image">
+
         <div class="hero-image-wrapper">
+
             <img src="images/iv-treatment.jpg"
                  alt="IV therapy treatment at Revive Wellness NC"
                  width="700"
                  height="1273"
                  fetchpriority="high">
+
         </div>
+
     </div>
 
 </div>
+```
 
 </section>
 
-<!-- ========================= SERVICES ========================= -->
+<!-- SERVICES -->
 
-<section class="services-overview" id="services">
+<section id="services">
 
+```
 <div class="container">
 
     <div class="section-header">
-        <span class="section-badge">Our Services</span>
+
+        <span class="section-badge">
+            Our Services
+        </span>
 
         <h2>
             Healthcare & Wellness,<br>
@@ -1127,25 +1052,34 @@
         <p>
             Personalized services provided by licensed medical professionals.
         </p>
+
     </div>
 
 
     <div class="services-grid">
+
 
         <!-- DPC -->
 
         <div class="service-card">
 
             <div class="service-icon">
+
                 <svg viewBox="0 0 48 48" fill="none">
-                    <circle cx="24" cy="24" r="19"
+
+                    <circle cx="24"
+                            cy="24"
+                            r="19"
                             stroke="currentColor"
                             stroke-width="2"/>
+
                     <path d="M24 14v20M14 24h20"
                           stroke="currentColor"
                           stroke-width="2"
                           stroke-linecap="round"/>
+
                 </svg>
+
             </div>
 
             <h3>Direct Primary Care</h3>
@@ -1156,10 +1090,12 @@
             </p>
 
             <ul class="service-features">
+
                 <li>Personalized primary care</li>
                 <li>Direct provider access</li>
                 <li>Convenient communication</li>
                 <li>Individualized care plans</li>
+
             </ul>
 
             <a href="direct-primary-care.html"
@@ -1170,7 +1106,7 @@
         </div>
 
 
-        <!-- Weight Loss -->
+        <!-- WEIGHT LOSS -->
 
         <div class="service-card featured">
 
@@ -1179,15 +1115,22 @@
             </span>
 
             <div class="service-icon">
+
                 <svg viewBox="0 0 48 48" fill="none">
-                    <circle cx="24" cy="24" r="20"
+
+                    <circle cx="24"
+                            cy="24"
+                            r="20"
                             stroke="currentColor"
                             stroke-width="2"/>
+
                     <path d="M24 12v12l8 4"
                           stroke="currentColor"
                           stroke-width="2"
                           stroke-linecap="round"/>
+
                 </svg>
+
             </div>
 
             <h3>Medical Weight Loss</h3>
@@ -1198,10 +1141,12 @@
             </p>
 
             <ul class="service-features">
+
                 <li>Semaglutide programs</li>
                 <li>Tirzepatide programs</li>
                 <li>Telehealth consultations</li>
                 <li>Ongoing medical support</li>
+
             </ul>
 
             <a href="weight-loss.html"
@@ -1217,21 +1162,28 @@
         <div class="service-card">
 
             <div class="service-icon">
+
                 <svg viewBox="0 0 48 48" fill="none">
+
                     <path d="M24 4v12"
                           stroke="currentColor"
                           stroke-width="2"/>
-                    <rect x="16" y="16"
+
+                    <rect x="16"
+                          y="16"
                           width="16"
                           height="24"
                           rx="2"
                           stroke="currentColor"
                           stroke-width="2"/>
+
                     <path d="M20 23h8M20 29h8M20 35h8"
                           stroke="currentColor"
                           stroke-width="1.5"
                           stroke-linecap="round"/>
+
                 </svg>
+
             </div>
 
             <h3>IV Hydration Therapy</h3>
@@ -1242,10 +1194,12 @@
             </p>
 
             <ul class="service-features">
+
                 <li>Myers' Cocktail</li>
                 <li>Immune support</li>
                 <li>Recovery hydration</li>
                 <li>Customized IV options</li>
+
             </ul>
 
             <a href="iv-therapy.html"
@@ -1258,22 +1212,27 @@
     </div>
 
 </div>
+```
 
 </section>
 
-<!-- ========================= DPC FEATURE ========================= -->
+<!-- DPC FEATURE -->
 
 <section class="dpc-section">
 
+```
 <div class="container dpc-grid">
 
     <div class="dpc-image">
+
         <img src="images/clinic-room.jpg"
-             alt="Revive Wellness NC primary care and wellness clinic"
+             alt="Revive Wellness NC clinic"
              loading="lazy"
              width="480"
              height="640">
+
     </div>
+
 
     <div class="dpc-content">
 
@@ -1293,6 +1252,7 @@
         </p>
 
         <ul class="dpc-list">
+
             <li>
                 <strong>Personalized care:</strong>
                 Your healthcare plan is built around you.
@@ -1312,6 +1272,7 @@
                 <strong>Ongoing relationship:</strong>
                 Build a long-term relationship with your healthcare team.
             </li>
+
         </ul>
 
         <a href="direct-primary-care.html"
@@ -1322,13 +1283,15 @@
     </div>
 
 </div>
+```
 
 </section>
 
-<!-- ========================= WHY REVIVE ========================= -->
+<!-- WHY REVIVE -->
 
-<section class="why-us">
+<section>
 
+```
 <div class="container why-us-grid">
 
     <div class="why-us-content">
@@ -1344,7 +1307,7 @@
 
         <p class="why-us-intro">
             We believe healthcare should feel personal, convenient,
-            and centered around the individual — not the waiting room.
+            and centered around the individual.
         </p>
 
 
@@ -1384,7 +1347,7 @@
                 <h4>Individualized Care</h4>
 
                 <p>
-                    Treatment plans are tailored to your needs and health goals.
+                    Treatment plans are tailored to your needs and goals.
                 </p>
 
             </div>
@@ -1446,13 +1409,15 @@
     </div>
 
 </div>
+```
 
 </section>
 
-<!-- ========================= HOW IT WORKS ========================= -->
+<!-- HOW IT WORKS -->
 
 <section class="how-it-works">
 
+```
 <div class="container">
 
     <div class="section-header">
@@ -1527,13 +1492,15 @@
     </div>
 
 </div>
+```
 
 </section>
 
-<!-- ========================= TESTIMONIALS ========================= -->
+<!-- TESTIMONIALS -->
 
-<section class="testimonials">
+<section>
 
+```
 <div class="container">
 
     <div class="section-header">
@@ -1615,25 +1582,25 @@
     <div class="testimonials-badges">
 
         <div class="review-badge">
-            <span>★</span>
-            <span>5.0 on Google</span>
+            ★ 5.0 on Google
         </div>
 
         <div class="review-badge">
-            <span>★</span>
-            <span>5.0 on Facebook</span>
+            ★ 5.0 on Facebook
         </div>
 
     </div>
 
 </div>
+```
 
 </section>
 
-<!-- ========================= FINAL CTA ========================= -->
+<!-- CTA -->
 
 <section class="cta-section">
 
+```
 <div class="container">
 
     <div class="cta-content">
@@ -1648,9 +1615,8 @@
         </h2>
 
         <p>
-            Whether you're looking for a primary care provider,
-            medical weight management, or IV hydration, we're here
-            to help you take the next step.
+            Whether you're looking for primary care, medical weight management,
+            or IV hydration, we're here to help you take the next step.
         </p>
 
         <div class="cta-buttons">
@@ -1672,13 +1638,15 @@
     </div>
 
 </div>
+```
 
 </section>
 
-<!-- ========================= FOOTER ========================= -->
+<!-- FOOTER -->
 
 <footer class="footer">
 
+```
 <div class="container">
 
     <div class="footer-grid">
@@ -1686,11 +1654,13 @@
         <div class="footer-brand">
 
             <a href="index.html">
+
                 <img src="logo.png"
                      alt="Revive Wellness NC"
                      class="logo-img"
                      width="1920"
                      height="1146">
+
             </a>
 
             <p>
@@ -1744,28 +1714,65 @@
         </div>
 
 
-        <div class="footer-links">
+        <div>
 
             <h4>Services</h4>
 
             <ul>
-                <li><a href="direct-primary-care.html">Direct Primary Care</a></li>
-                <li><a href="weight-loss.html">Medical Weight Loss</a></li>
-                <li><a href="iv-therapy.html">IV Hydration Therapy</a></li>
-                <li><a href="iv-therapy.html#menu">IV Menu & Pricing</a></li>
+
+                <li>
+                    <a href="direct-primary-care.html">
+                        Direct Primary Care
+                    </a>
+                </li>
+
+                <li>
+                    <a href="weight-loss.html">
+                        Medical Weight Loss
+                    </a>
+                </li>
+
+                <li>
+                    <a href="iv-therapy.html">
+                        IV Hydration Therapy
+                    </a>
+                </li>
+
+                <li>
+                    <a href="iv-therapy.html#menu">
+                        IV Menu & Pricing
+                    </a>
+                </li>
+
             </ul>
 
         </div>
 
 
-        <div class="footer-links">
+        <div>
 
             <h4>Company</h4>
 
             <ul>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="privacy.html">Privacy Policy</a></li>
+
+                <li>
+                    <a href="about.html">
+                        About Us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+                <li>
+                    <a href="privacy.html">
+                        Privacy Policy
+                    </a>
+                </li>
+
             </ul>
 
         </div>
@@ -1775,27 +1782,23 @@
 
             <h4>Contact</h4>
 
-            <address>
+            <p>
+                6905 Knightdale Boulevard<br>
+                Suite 105<br>
+                Knightdale, NC 27545
+            </p>
 
-                <p>
-                    6905 Knightdale Boulevard<br>
-                    Suite 105<br>
-                    Knightdale, NC 27545
-                </p>
+            <p>
+                <a href="tel:9843044153">
+                    (984) 304-4153
+                </a>
+            </p>
 
-                <p>
-                    <a href="tel:9843044153">
-                        (984) 304-4153
-                    </a>
-                </p>
-
-                <p>
-                    <a href="mailto:ReviveWellnessNC@outlook.com">
-                        ReviveWellnessNC@outlook.com
-                    </a>
-                </p>
-
-            </address>
+            <p>
+                <a href="mailto:ReviveWellnessNC@outlook.com">
+                    ReviveWellnessNC@outlook.com
+                </a>
+            </p>
 
             <p class="hours">
                 <strong>Hours:</strong><br>
@@ -1822,9 +1825,46 @@
     </div>
 
 </div>
+```
 
 </footer>
 
-<script> const navToggle = document.querySelector('.nav-toggle'); const navMenu = document.querySelector('.nav-menu'); navToggle.addEventListener('click', function () { const expanded = navToggle.getAttribute('aria-expanded') === 'true'; navToggle.setAttribute('aria-expanded', String(!expanded)); navMenu.classList.toggle('open'); }); document.querySelectorAll('.nav-menu a').forEach(link => { link.addEventListener('click', () => { navMenu.classList.remove('open'); navToggle.setAttribute('aria-expanded', 'false'); }); }); </script>
+<script>
 
-</body> </html>
+    const navToggle = document.querySelector(".nav-toggle");
+    const navMenu = document.querySelector(".nav-menu");
+
+    navToggle.addEventListener("click", function() {
+
+        const expanded =
+            navToggle.getAttribute("aria-expanded") === "true";
+
+        navToggle.setAttribute(
+            "aria-expanded",
+            String(!expanded)
+        );
+
+        navMenu.classList.toggle("open");
+
+    });
+
+
+    document.querySelectorAll(".nav-menu a").forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+            navMenu.classList.remove("open");
+
+            navToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
