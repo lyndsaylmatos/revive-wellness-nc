@@ -970,6 +970,73 @@
         }
     }
 
+
+/* ===== COMPACT CENTERED HEADER ===== */
+@media (min-width: 951px) {
+    .nav-container {
+        position: relative;
+        width: min(1280px, calc(100% - 40px));
+        min-height: 88px;
+        height: 88px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar .logo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+
+    .navbar .logo-img {
+        width: 148px;
+        max-height: 78px;
+        object-fit: contain;
+    }
+
+    .nav-menu {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, auto) 190px repeat(4, auto);
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+    }
+
+    .nav-menu li:nth-child(4) {
+        grid-column: 5;
+    }
+
+    .nav-menu a {
+        font-size: 9px;
+        letter-spacing: .09em;
+    }
+
+    .btn-nav {
+        padding: 11px 19px;
+    }
+}
+
+@media (max-width: 950px) {
+    .nav-container {
+        min-height: 78px;
+        height: 78px;
+    }
+
+    .navbar .logo-img {
+        width: 138px;
+        max-height: 68px;
+        object-fit: contain;
+    }
+
+    .nav-menu {
+        top: 78px;
+    }
+}
+
 </style>
 ```
 
