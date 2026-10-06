@@ -872,6 +872,104 @@
         }
     }
 
+
+    /* ===== HEADER REFRESH ONLY ===== */
+    .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(255,255,255,.98);
+        border-bottom: 1px solid #edf0f4;
+        backdrop-filter: blur(10px);
+    }
+
+    .nav-container {
+        width: min(1280px, calc(100% - 40px));
+        min-height: 112px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    .navbar .logo-img {
+        width: 205px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .nav-menu {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        list-style: none;
+    }
+
+    .nav-menu a {
+        font-size: 10px;
+        font-weight: 600;
+        color: #17345f;
+        letter-spacing: .10em;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a.active {
+        color: #b58a42;
+    }
+
+    .nav-menu a.active {
+        position: relative;
+    }
+
+    .nav-menu a.active::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -10px;
+        height: 1px;
+        background: #b58a42;
+    }
+
+    .btn-nav {
+        background: #607fa9;
+        color: #fff !important;
+        padding: 14px 23px;
+        border-radius: 30px;
+    }
+
+    .btn-nav:hover {
+        background: #17345f;
+        color: #fff !important;
+    }
+
+    @media (max-width: 950px) {
+        .nav-container {
+            min-height: 92px;
+        }
+
+        .navbar .logo-img {
+            width: 170px;
+        }
+
+        .nav-menu {
+            top: 92px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .nav-container {
+            width: calc(100% - 28px);
+        }
+
+        .navbar .logo-img {
+            width: 150px;
+        }
+    }
+
 </style>
 ```
 
@@ -888,7 +986,7 @@
 
     <a href="index.html" class="logo" aria-label="Revive Wellness NC Home">
 
-        <img src="logo.png"
+        <img src="images/Revive New Logo no circle.jpeg"
              alt="Revive Wellness NC"
              class="logo-img"
              width="1920"
@@ -1673,7 +1771,7 @@
 
             <a href="index.html">
 
-                <img src="logo.png"
+                <img src="images/Revive New Logo no circle.jpeg"
                      alt="Revive Wellness NC"
                      class="logo-img"
                      width="1920"
@@ -1801,9 +1899,9 @@
             <h4>Contact</h4>
 
             <p>
-                6905 Knightdale Boulevard<br>
-                Suite 105<br>
-                Knightdale, NC 27545
+                7633 Knightdale Boulevard<br>
+                 Suite 106B<br>
+                 Knightdale, NC 27545
             </p>
 
             <p>
