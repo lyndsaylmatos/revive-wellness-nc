@@ -1162,6 +1162,104 @@
         background: var(--navy);
     }
 }
+
+/* ===== CENTER LOGO FIX ===== */
+/* Desktop: center logo independently of unequal nav items */
+@media (min-width: 951px) {
+    .nav-container {
+        position: relative !important;
+        min-height: 88px !important;
+        height: 88px !important;
+    }
+
+    .navbar .logo {
+        position: absolute !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        z-index: 5 !important;
+        width: 180px !important;
+        height: 84px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .navbar .logo-img {
+        width: 180px !important;
+        height: 84px !important;
+        max-width: 180px !important;
+        max-height: 84px !important;
+        object-fit: contain !important;
+        display: block !important;
+    }
+
+    /* Reserve a true center opening for the logo */
+    .nav-menu {
+        width: 100% !important;
+        display: grid !important;
+        grid-template-columns: repeat(3, max-content) minmax(190px, 1fr) repeat(4, max-content) !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        column-gap: 18px !important;
+    }
+
+    .nav-menu li:nth-child(4) {
+        grid-column: 5 !important;
+    }
+}
+
+/* Mobile: keep logo centered between screen edges, not menu elements */
+@media (max-width: 950px) {
+    .nav-container {
+        position: relative !important;
+    }
+
+    .navbar .logo {
+        position: absolute !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        margin: 0 !important;
+    }
+}
+
+
+/* ===== LARGER HEADER NAV TEXT ===== */
+@media (min-width: 951px) {
+    .nav-menu a {
+        font-size: 12px !important;
+        font-weight: 600 !important;
+        letter-spacing: .075em !important;
+    }
+
+    .nav-menu .btn-nav {
+        font-size: 12px !important;
+    }
+}
+
+
+/* ===== MAXIMUM SAFE DESKTOP LOGO SIZE ===== */
+@media (min-width: 951px) {
+    .navbar .logo {
+        width: 220px !important;
+        height: 84px !important;
+    }
+
+    .navbar .logo-img {
+        width: 220px !important;
+        height: 84px !important;
+        max-width: 220px !important;
+        max-height: 84px !important;
+        object-fit: contain !important;
+    }
+
+    /* Give the larger centered logo enough breathing room */
+    .nav-menu {
+        grid-template-columns: repeat(3, max-content) minmax(230px, 1fr) repeat(4, max-content) !important;
+    }
+}
+
 </style>
 ```
 
