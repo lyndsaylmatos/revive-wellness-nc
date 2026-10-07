@@ -30,8 +30,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-
-    :root {
+:root {
         --cream: #f8f6f2;
         --cream-dark: #eeeae2;
         --white: #ffffff;
@@ -873,510 +872,7 @@
     }
 
 
-    /* ===== HEADER REFRESH ONLY ===== */
-    .navbar {
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        background: rgba(255,255,255,.98);
-        border-bottom: 1px solid #edf0f4;
-        backdrop-filter: blur(10px);
-    }
-
-    .nav-container {
-        width: min(1280px, calc(100% - 40px));
-        min-height: 112px;
-        margin: auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 30px;
-    }
-
-    .navbar .logo-img {
-        width: 205px;
-        height: auto;
-        object-fit: contain;
-    }
-
-    .nav-menu {
-        display: flex;
-        align-items: center;
-        gap: 22px;
-        list-style: none;
-    }
-
-    .nav-menu a {
-        font-size: 10px;
-        font-weight: 600;
-        color: #17345f;
-        letter-spacing: .10em;
-        text-transform: uppercase;
-        white-space: nowrap;
-    }
-
-    .nav-menu a:hover,
-    .nav-menu a.active {
-        color: #b58a42;
-    }
-
-    .nav-menu a.active {
-        position: relative;
-    }
-
-    .nav-menu a.active::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: -10px;
-        height: 1px;
-        background: #b58a42;
-    }
-
-    .btn-nav {
-        background: #607fa9;
-        color: #fff !important;
-        padding: 14px 23px;
-        border-radius: 30px;
-    }
-
-    .btn-nav:hover {
-        background: #17345f;
-        color: #fff !important;
-    }
-
-    @media (max-width: 950px) {
-        .nav-container {
-            min-height: 92px;
-        }
-
-        .navbar .logo-img {
-            width: 170px;
-        }
-
-        .nav-menu {
-            top: 92px;
-        }
-    }
-
-    @media (max-width: 600px) {
-        .nav-container {
-            width: calc(100% - 28px);
-        }
-
-        .navbar .logo-img {
-            width: 150px;
-        }
-    }
-
-
-/* ===== COMPACT CENTERED HEADER ===== */
-@media (min-width: 951px) {
-    .nav-container {
-        position: relative;
-        width: min(1280px, calc(100% - 40px));
-        min-height: 88px;
-        height: 88px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .navbar .logo {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 2;
-    }
-
-    .navbar .logo-img {
-        width: 148px;
-        max-height: 78px;
-        object-fit: contain;
-    }
-
-    .nav-menu {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(3, auto) 190px repeat(4, auto);
-        align-items: center;
-        justify-content: space-between;
-        gap: 14px;
-    }
-
-    .nav-menu li:nth-child(4) {
-        grid-column: 5;
-    }
-
-    .nav-menu a {
-        font-size: 9px;
-        letter-spacing: .09em;
-    }
-
-    .btn-nav {
-        padding: 11px 19px;
-    }
-}
-
-@media (max-width: 950px) {
-    .nav-container {
-        min-height: 78px;
-        height: 78px;
-    }
-
-    .navbar .logo-img {
-        width: 138px;
-        max-height: 68px;
-        object-fit: contain;
-    }
-
-    .nav-menu {
-        top: 78px;
-    }
-}
-
-
-/* ===== MAXIMIZED LOGO — SAME HEADER HEIGHT ===== */
-@media (min-width: 951px) {
-    .nav-container {
-        min-height: 88px;
-        height: 88px;
-        overflow: visible;
-    }
-
-    .navbar .logo {
-        height: 84px;
-        width: 180px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .navbar .logo-img {
-        width: 100%;
-        height: 100%;
-        max-width: 180px;
-        max-height: 84px;
-        object-fit: contain;
-        display: block;
-    }
-}
-
-@media (max-width: 950px) {
-    .nav-container {
-        min-height: 78px;
-        height: 78px;
-    }
-
-    .navbar .logo {
-        height: 74px;
-        display: flex;
-        align-items: center;
-    }
-
-    .navbar .logo-img {
-        width: 160px;
-        height: 74px;
-        max-height: 74px;
-        object-fit: contain;
-        display: block;
-    }
-}
-
-
-/* ===== MOBILE PHONE POLISH ===== */
-@media (max-width: 950px) {
-    body {
-        overflow-x: hidden;
-    }
-
-    .navbar {
-        position: sticky;
-        top: 0;
-    }
-
-    .nav-container {
-        width: calc(100% - 28px);
-        min-height: 78px;
-        height: 78px;
-        position: relative;
-        justify-content: flex-end;
-    }
-
-    /* Keep the logo truly centered while the hamburger stays on the right */
-    .navbar .logo {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 150px;
-        height: 74px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .navbar .logo-img {
-        width: 150px;
-        height: 74px;
-        max-width: 100%;
-        max-height: 74px;
-        object-fit: contain;
-    }
-
-    .nav-toggle {
-        display: block;
-        position: relative;
-        z-index: 3;
-        padding: 10px 4px 10px 12px;
-    }
-
-    .nav-menu {
-        position: absolute;
-        top: 78px;
-        left: 0;
-        width: 100%;
-        max-height: calc(100vh - 78px);
-        overflow-y: auto;
-        background: rgba(255,255,255,.99);
-        padding: 18px 22px 24px;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-        border-top: 1px solid var(--border);
-        box-shadow: 0 12px 30px rgba(0,0,0,.08);
-    }
-
-    .nav-menu li {
-        width: 100%;
-        padding: 0;
-    }
-
-    .nav-menu a {
-        display: block;
-        width: 100%;
-        padding: 13px 2px;
-        font-size: 11px;
-        letter-spacing: .08em;
-    }
-
-    .nav-menu a.active::after {
-        display: none;
-    }
-
-    .nav-menu .btn-nav {
-        margin-top: 10px;
-        padding: 13px 18px;
-        text-align: center;
-    }
-
-    .hero {
-        padding: 42px 0 52px;
-    }
-
-    .hero-grid {
-        gap: 34px;
-    }
-
-    .hero-image {
-        order: 0;
-    }
-
-    .hero h1 {
-        font-size: clamp(38px, 11vw, 50px);
-        line-height: 1.08;
-        margin-bottom: 18px;
-    }
-
-    .hero-subtitle {
-        font-size: 15px;
-        line-height: 1.75;
-        margin-bottom: 25px;
-    }
-
-    .hero-cta {
-        gap: 10px;
-        margin-bottom: 30px;
-    }
-
-    .hero-cta .btn {
-        flex: 1 1 180px;
-    }
-
-    .hero-stats {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 12px;
-        width: 100%;
-    }
-
-    .stat {
-        min-width: 0;
-        text-align: center;
-        align-items: center;
-    }
-
-    .stat-number {
-        font-size: 23px;
-    }
-
-    .stat-label {
-        font-size: 8px;
-        line-height: 1.4;
-    }
-
-    .hero-image::before {
-        right: -12px;
-        bottom: -12px;
-    }
-
-    .hero-image-wrapper img {
-        height: min(62vh, 500px);
-        min-height: 340px;
-    }
-
-    .services-grid,
-    .steps-grid,
-    .testimonials-grid {
-        gap: 18px;
-    }
-
-    .service-card {
-        padding: 30px 24px;
-    }
-
-    .dpc-grid,
-    .why-us-grid {
-        gap: 38px;
-    }
-
-    .dpc-image img,
-    .why-us-image img {
-        height: min(68vh, 500px);
-    }
-
-    .section-header {
-        margin-bottom: 38px;
-    }
-
-    .section-header h2,
-    .dpc-content h2,
-    .why-us-content h2 {
-        font-size: clamp(32px, 9vw, 42px);
-    }
-
-    .booking-section > .container > div:last-child {
-        padding: 16px !important;
-    }
-
-    .footer-grid {
-        gap: 34px;
-    }
-}
-
-@media (max-width: 600px) {
-    .container,
-    .nav-container {
-        width: calc(100% - 28px);
-    }
-
-    section {
-        padding: 62px 0;
-    }
-
-    .hero {
-        padding: 34px 0 45px;
-    }
-
-    .hero h1 {
-        font-size: 40px;
-    }
-
-    .hero-badge,
-    .section-badge {
-        font-size: 9px;
-        letter-spacing: .12em;
-    }
-
-    .hero-cta {
-        flex-direction: column;
-    }
-
-    .hero-cta .btn {
-        width: 100%;
-        flex: none;
-    }
-
-    .hero-stats {
-        gap: 6px;
-    }
-
-    .hero-image-wrapper img {
-        height: 390px;
-        min-height: 0;
-    }
-
-    .service-card h3 {
-        font-size: 25px;
-    }
-
-    .dpc-image img,
-    .why-us-image img {
-        height: 390px;
-    }
-
-    .why-features {
-        grid-template-columns: 1fr;
-        gap: 22px;
-    }
-
-    .cta-section {
-        padding: 68px 0;
-    }
-
-    .cta-buttons {
-        flex-direction: column;
-    }
-
-    .cta-buttons .btn {
-        width: 100%;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        line-height: 1.6;
-    }
-}
-
-@media (max-width: 390px) {
-    .navbar .logo,
-    .navbar .logo-img {
-        width: 132px;
-    }
-
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    .hero-stats {
-        grid-template-columns: 1fr;
-        gap: 14px;
-    }
-
-    .stat {
-        padding: 8px 0;
-        border-bottom: 1px solid var(--border);
-    }
-}
-
-
-/* ===== MOBILE HEADER FIX: COMPACT + CLOSED MENU ===== */
+    /* ===== MOBILE HEADER FIX: COMPACT + CLOSED MENU ===== */
 @media (max-width: 950px) {
     .navbar {
         min-height: 64px !important;
@@ -1459,6 +955,213 @@
     }
 }
 
+
+/* ===== REVIVE LOGO COLOR PALETTE ===== */
+:root {
+    --cream: #FBF8F2;
+    --cream-dark: #F2EBDD;
+    --white: #FFFFFF;
+    --charcoal: #10284A;
+    --text: #40516A;
+    --muted: #708096;
+    --accent: #C9973D;
+    --accent-dark: #A87422;
+    --border: #E2E8F0;
+    --shadow: 0 15px 45px rgba(15, 45, 86, .10);
+    --navy: #0F2D56;
+    --royal-blue: #315F96;
+    --soft-blue: #DCE7F2;
+    --pale-blue: #F3F7FB;
+}
+
+/* Header */
+.navbar {
+    background: rgba(255,255,255,.98);
+    border-bottom: 1px solid #E4EAF1;
+}
+
+.nav-menu a {
+    color: var(--navy);
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--accent-dark);
+}
+
+.nav-menu a.active::after {
+    background: var(--accent);
+}
+
+.btn-nav {
+    background: var(--royal-blue);
+    color: #fff !important;
+}
+
+.btn-nav:hover {
+    background: var(--navy);
+}
+
+/* Buttons */
+.btn-primary {
+    background: var(--navy);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: var(--royal-blue);
+}
+
+.btn-secondary {
+    border-color: #C9D5E2;
+    color: var(--navy);
+    background: #fff;
+}
+
+.btn-secondary:hover {
+    border-color: var(--accent);
+    color: var(--accent-dark);
+}
+
+.btn-outline {
+    border-color: var(--accent);
+    color: var(--navy);
+}
+
+.btn-outline:hover {
+    background: var(--accent);
+    color: #fff;
+}
+
+/* Hero */
+.hero {
+    background:
+        radial-gradient(circle at 85% 15%, rgba(220,231,242,.72), transparent 35%),
+        linear-gradient(135deg, #FBF8F2 0%, #FFFFFF 52%, #F3F7FB 100%);
+}
+
+.hero-badge,
+.section-badge {
+    color: var(--accent-dark);
+}
+
+.hero h1 {
+    color: var(--navy);
+}
+
+.hero h1 span {
+    color: var(--royal-blue);
+}
+
+.hero-subtitle {
+    color: var(--text);
+}
+
+.hero-image::before {
+    background: var(--soft-blue);
+}
+
+/* Services */
+.service-card {
+    border-color: #E1E7EE;
+}
+
+.service-card.featured {
+    border-color: rgba(201,151,61,.55);
+    box-shadow: 0 10px 35px rgba(15,45,86,.08);
+}
+
+.service-icon,
+.feature-icon {
+    background: var(--pale-blue);
+    color: var(--royal-blue);
+}
+
+.service-badge {
+    background: var(--accent);
+}
+
+/* Alternating light sections */
+.dpc-section,
+.how-it-works {
+    background:
+        linear-gradient(135deg, #F8F4EC 0%, #F4F8FC 100%);
+}
+
+.dpc-list li {
+    border-color: #DDE5EE;
+}
+
+.step-number,
+.testimonial-rating {
+    color: var(--accent);
+}
+
+.testimonial-card {
+    background: var(--pale-blue);
+    border: 1px solid #E1E8F0;
+}
+
+/* Booking */
+.booking-section {
+    background: #fff;
+}
+
+/* Main CTA */
+.cta-section {
+    background:
+        linear-gradient(135deg, #0B274C 0%, #173E70 100%);
+}
+
+.cta-section .section-badge {
+    color: #E3BC70;
+}
+
+.btn-white {
+    color: var(--navy);
+}
+
+.btn-outline-white:hover {
+    background: rgba(255,255,255,.10);
+}
+
+/* Footer */
+.footer {
+    background: #081E3A;
+}
+
+.footer-bottom {
+    border-color: rgba(255,255,255,.12);
+}
+
+.footer li a:hover,
+.footer-contact a:hover {
+    color: #E3BC70;
+}
+
+.footer-social a {
+    border-color: rgba(255,255,255,.25);
+}
+
+/* Keep the supplied full-color logo visible in the footer */
+.footer-brand .logo-img {
+    filter: none;
+    background: #fff;
+    border-radius: 10px;
+    padding: 4px;
+}
+
+/* Mobile dropdown follows new palette */
+@media (max-width: 950px) {
+    .nav-menu {
+        background: rgba(255,255,255,.99) !important;
+        border-top-color: #E4EAF1 !important;
+    }
+
+    .nav-toggle span {
+        background: var(--navy);
+    }
+}
 </style>
 ```
 
@@ -1999,90 +1702,6 @@
 ```
 
 </section>
-
-<!-- HOW IT WORKS -->
-
-<section class="how-it-works">
-
-```
-<div class="container">
-
-    <div class="section-header">
-
-        <span class="section-badge">
-            Getting Started
-        </span>
-
-        <h2>
-            Getting Started Is Simple
-        </h2>
-
-        <p>
-            Take the next step toward personalized healthcare and wellness.
-        </p>
-
-    </div>
-
-
-    <div class="steps-grid">
-
-        <div class="step">
-
-            <div class="step-number">01</div>
-
-            <h3>Book Your Visit</h3>
-
-            <p>
-                Schedule an appointment or consultation that works for you.
-            </p>
-
-        </div>
-
-
-        <div class="step">
-
-            <div class="step-number">02</div>
-
-            <h3>Meet With Us</h3>
-
-            <p>
-                Discuss your health history, needs, goals, and available options.
-            </p>
-
-        </div>
-
-
-        <div class="step">
-
-            <div class="step-number">03</div>
-
-            <h3>Begin Your Plan</h3>
-
-            <p>
-                Move forward with a personalized plan and ongoing support.
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <div class="steps-cta">
-
-        <a href="https://intakeq.com/booking/atbauq"
-           class="btn btn-primary"
-           target="_blank"
-           rel="noopener noreferrer">
-            Book Your Appointment
-        </a>
-
-    </div>
-
-</div>
-```
-
-</section>
-
 
 <!-- BOOKING WIDGET -->
 
